@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="txt_welcome">Welcome!</string>
+    <string name="btn_view_accounts">View Accounts</string>
+    <string name="txt_view_accounts">Click the button above to see your accounts.</string>
+</resources>

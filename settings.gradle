@@ -1,0 +1,8 @@
+rootProject.name = "dm-android-interview"
+
+include ':app'
+include ':common'
+include ':networking'
+include ':data'
+include ':features:accounts'
+include ':features:home'
