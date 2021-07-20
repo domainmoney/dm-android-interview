@@ -4,7 +4,10 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
+import com.domainmoney.accounts.account_details.AccountDetailsScreen
+import com.domainmoney.accounts.account_details.AccountDetailsViewModelFactory
 import com.domainmoney.accounts.account_list.AccountListScreen
+import com.domainmoney.accounts.account_list.AccountListViewModelFactory
 import com.domainmoney.common.navigation.DomainNavigationFactory
 import com.domainmoney.common.navigation.GlobalDestination
 import com.domainmoney.common.navigation.HiltNavigationFactory
@@ -18,6 +21,8 @@ import javax.inject.Singleton
 
 @HiltNavigationFactory
 class AccountsNavigationFactory @Inject constructor(
+    private val accountListViewModelFactory: AccountListViewModelFactory,
+    private val accountDetailsViewModelFactory: AccountDetailsViewModelFactory
 ) : DomainNavigationFactory {
 
     override fun create(builder: NavGraphBuilder, navController: NavHostController) {
@@ -26,7 +31,15 @@ class AccountsNavigationFactory @Inject constructor(
             startDestination = AccountDestinations.AccountList.route
         ) {
             composable(route = AccountDestinations.AccountList.route) {
-                AccountListScreen()
+                AccountListScreen(accountListViewModelFactory.create(
+                    navigateToAccount = { navController.navigate(AccountDestinations.AccountDetails.create(it.id)) }
+                ))
+            }
+            composable(route = AccountDestinations.AccountDetails.route) {
+                val accountId = it.arguments?.getString("accountId")?.toInt()!!
+                AccountDetailsScreen(accountDetailsViewModelFactory.create(
+                    accountId = accountId
+                ))
             }
         }
     }

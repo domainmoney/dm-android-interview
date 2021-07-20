@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="txt_account_list">Account List</string>
+    <string name="txt_loading">Loading...</string>
+    <string name="txt_error">Error!</string>
+    <string name="txt_error_unknown">Unknown error</string>
 </resources>

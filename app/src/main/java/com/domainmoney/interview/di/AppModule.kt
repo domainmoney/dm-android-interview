@@ -40,5 +40,5 @@ object AppModule {
 
     @Provides
     @ApiUrl
-    fun provideApiUrl(): String = "https://mock.server/api/"
+    fun provideApiUrl(): String = "https://50d29d76-957c-4ea6-844d-5a8806e21863.mock.pstmn.io/"
 }
