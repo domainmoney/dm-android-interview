@@ -10,7 +10,15 @@ Upon opening the app, you will see a Home Screen with a button which takes you t
 
 This is all there is to it, now it's up to you to add additional functionality to this app by completing the tasks listed in the [Issues tab](https://github.com/domainmoney/dm-android-interview/issues).
 
-For details and explanations regarding [project structure](https://github.com/domainmoney/dm-android-interview/wiki/Project-Structure) and [API specification](https://github.com/domainmoney/dm-android-interview/wiki/API-Specification), please refer to the [Wiki tab](https://github.com/domainmoney/dm-android-interview/wiki). You will also find links to helpful articles there.
+For details and explanations regarding [project structure](https://github.com/domainmoney/dm-android-interview/wiki/Project-Structure) and [API specification](https://github.com/domainmoney/dm-android-interview/wiki/API-Specification), please refer to the [Wiki tab](https://github.com/domainmoney/dm-android-interview/wiki). You will also find links to helpful articles there which will help you understand the architecture patterns used throught this app.
+
+## Submitting solution
+
+Clone or fork this repository and start working on the code in your local environment.
+Complete the issues and send us the finished code, preferably as a link to a GitHub repository.
+
+For bonus points keep your commits neatly organized and include issue #number in each commit message.  
+E.x. `#1 crash fix`
 
 ## Screenshots
 
