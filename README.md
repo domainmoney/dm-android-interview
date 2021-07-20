@@ -1,6 +1,6 @@
 # DomainMoney Android Interview
 
-This repository constains interview tests for DomainMoney Android developers.
+This repository constains tutorial for DomainMoney Android developers.
 
 ## Overview
 
