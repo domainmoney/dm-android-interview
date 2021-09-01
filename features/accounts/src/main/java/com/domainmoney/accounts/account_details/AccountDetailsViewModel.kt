@@ -30,14 +30,16 @@ class AccountDetailsViewModel @AssistedInject constructor(
     private val accountApiService: AccountApiService
 ) : ViewModel() {
 
-    class Factory(
-        private val assistedFactory: AccountDetailsViewModelFactory,
-        private val accountId: Int
-    ) : ViewModelProvider.Factory {
-        override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-            return assistedFactory.create(
-                accountId = accountId
-            ) as T
+    companion object {
+        fun provideFactory(
+            assistedFactory: AccountDetailsViewModelFactory,
+            accountId: Int
+        ): ViewModelProvider.Factory = object : ViewModelProvider.Factory {
+            override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+                return assistedFactory.create(
+                    accountId = accountId
+                ) as T
+            }
         }
     }
 

@@ -27,14 +27,16 @@ class HomeViewModel @AssistedInject constructor(
     @Assisted("navigateToAccounts") private val navigateToAccounts: () -> Unit,
 ) : ViewModel() {
 
-    class Factory(
-        private val assistedFactory: HomeViewModelFactory,
-        private val navigateToAccounts: () -> Unit,
-    ) : ViewModelProvider.Factory {
-        override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-            return assistedFactory.create(
-                navigateToAccounts = navigateToAccounts,
-            ) as T
+    companion object {
+        fun provideFactory(
+            assistedFactory: HomeViewModelFactory,
+            navigateToAccounts: () -> Unit,
+        ): ViewModelProvider.Factory = object : ViewModelProvider.Factory {
+            override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+                return assistedFactory.create(
+                    navigateToAccounts = navigateToAccounts,
+                ) as T
+            }
         }
     }
 

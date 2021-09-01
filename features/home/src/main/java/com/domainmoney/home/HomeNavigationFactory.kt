@@ -1,5 +1,6 @@
 package com.domainmoney.home
 
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
@@ -21,9 +22,10 @@ class HomeNavigationFactory @Inject constructor(
 
     override fun create(builder: NavGraphBuilder, navController: NavHostController) {
         builder.composable(route = GlobalDestination.Home.route) {
-            HomeScreen(homeViewModelFactory.create(
+            HomeScreen(viewModel(factory = HomeViewModel.provideFactory(
+                assistedFactory = homeViewModelFactory,
                 navigateToAccounts = { navController.navigate(GlobalDestination.Accounts.route) },
-            ))
+            )))
         }
     }
 }

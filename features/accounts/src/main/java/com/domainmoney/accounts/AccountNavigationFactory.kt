@@ -1,12 +1,15 @@
 package com.domainmoney.accounts
 
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
 import com.domainmoney.accounts.account_details.AccountDetailsScreen
+import com.domainmoney.accounts.account_details.AccountDetailsViewModel
 import com.domainmoney.accounts.account_details.AccountDetailsViewModelFactory
 import com.domainmoney.accounts.account_list.AccountListScreen
+import com.domainmoney.accounts.account_list.AccountListViewModel
 import com.domainmoney.accounts.account_list.AccountListViewModelFactory
 import com.domainmoney.common.navigation.DomainNavigationFactory
 import com.domainmoney.common.navigation.GlobalDestination
@@ -31,15 +34,17 @@ class AccountsNavigationFactory @Inject constructor(
             startDestination = AccountDestinations.AccountList.route
         ) {
             composable(route = AccountDestinations.AccountList.route) {
-                AccountListScreen(accountListViewModelFactory.create(
+                AccountListScreen(viewModel(factory = AccountListViewModel.provideFactory(
+                    assistedFactory = accountListViewModelFactory,
                     navigateToAccount = { navController.navigate(AccountDestinations.AccountDetails.create(it.id)) }
-                ))
+                )))
             }
             composable(route = AccountDestinations.AccountDetails.route) {
                 val accountId = it.arguments?.getString("accountId")?.toInt()!!
-                AccountDetailsScreen(accountDetailsViewModelFactory.create(
+                AccountDetailsScreen(viewModel(factory = AccountDetailsViewModel.provideFactory(
+                    assistedFactory = accountDetailsViewModelFactory,
                     accountId = accountId
-                ))
+                )))
             }
         }
     }
