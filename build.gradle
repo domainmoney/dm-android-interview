@@ -10,7 +10,6 @@ buildscript {
         classpath plugin.android.gradle
         classpath plugin.android.hilt
         classpath plugin.kotlin.gradle
-        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.10'
     }
 }
 
