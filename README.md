@@ -1,18 +1,18 @@
-# DomainMoney Android Interview
+# Domain Money Android Interview
 
-This repository constains tutorial for DomainMoney Android developers.
+This repository contains tutorial for Domain Money Android engineers.
 
 ## Overview
 
 The app consists of 3 simple screens - Home Screen, Account List and Account Details.
 
-Upon opening the app, you will see a Home Screen with a button which takes you to the Account List. Clicking on any of the accounts in the list will take you to the Accoount Details screen for that account.
+Upon opening the app, you will see a Home Screen with a button which takes you to the Account List. Clicking on any of the accounts in the list will take you to the Account Details screen for that account.
 
 That is all there is to it, now it's up to you to add additional functionality to this app by completing the tasks listed in the [Issues tab](https://github.com/domainmoney/dm-android-interview/issues). Issues marked as _**bonus**_ are extra tasks which are worth looking into, but don't have to be completed.
 
-For details and explanations regarding [project structure](https://github.com/domainmoney/dm-android-interview/wiki/Project-Structure) and [API specification](https://github.com/domainmoney/dm-android-interview/wiki/API-Specification), please refer to the [Wiki tab](https://github.com/domainmoney/dm-android-interview/wiki). You will also find links to helpful articles there which will help you understand the architecture patterns used throught this app.
+For details and explanations regarding [project structure](https://github.com/domainmoney/dm-android-interview/wiki/Project-Structure) and [API specification](https://github.com/domainmoney/dm-android-interview/wiki/API-Specification), please refer to the [Wiki tab](https://github.com/domainmoney/dm-android-interview/wiki). You will also find links to helpful articles there which will help you understand the architecture patterns used throughout the app.
 
-## Submitting solution
+## Submitting Solution
 
 Clone or fork this repository and start working on the code in your local environment.
 Complete the issues and send us the finished code, preferably as a link to a GitHub repository.
