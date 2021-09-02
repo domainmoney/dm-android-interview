@@ -62,5 +62,5 @@ dependencies {
     api libs.networking.retrofit.moshi
     api libs.moshi.moshi
 
-    implementation project(':common')
+    implementation projects.common
 }

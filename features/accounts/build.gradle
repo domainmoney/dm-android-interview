@@ -56,6 +56,6 @@ dependencies {
     implementation libs.kotlin
     implementation libs.hilt.android
 
-    implementation project(':common')
-    implementation project(':networking')
+    implementation projects.common
+    implementation projects.networking
 }

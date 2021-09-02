@@ -65,10 +65,10 @@ dependencies {
     implementation libs.compose.accompanist.insets
     implementation libs.google.material
 
-    implementation project(':common')
-    implementation project(':data')
-    implementation project(':networking')
+    implementation projects.common
+    implementation projects.data
+    implementation projects.networking
 
-    implementation project(':features:home')
-    implementation project(':features:accounts')
+    implementation projects.features.home
+    implementation projects.features.accounts
 }
